@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import ro.pub.cs.systems.eim.practicaltest01var04.ui.main.MainFragment;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -51,7 +49,10 @@ public class PracticalTest01Var04MainActivity extends AppCompatActivity {
                     infoTextView.setText(String.valueOf(infoText));
                     break;
                 case R.id.navigate_to_secondary_activity_button:
-                    //nothing yet
+                    Intent intent= new Intent(PracticalTest01Var04MainActivity.this, PracticalTest01Var04SecondaryActivity.class);
+                    intent.putExtra("topText", nameString);
+                    intent.putExtra("bottomText", groupString);
+                    startActivityForResult(intent, 1);
                     break;
             }
         }
@@ -104,5 +105,14 @@ public class PracticalTest01Var04MainActivity extends AppCompatActivity {
         if (savedInstanceState.containsKey("bottomCheckBox"))
             bottomCheckBox.setChecked(savedInstanceState.getBoolean("bottomCheckBox"));
         Log.d("<<RN>>: ", "succesfuly restored");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        if (requestCode == 1) {
+            Toast.makeText(this, "The activity returned with result " + resultCode, Toast.LENGTH_LONG).show();
+        }
     }
 }
