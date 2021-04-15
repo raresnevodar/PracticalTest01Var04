@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="ro.pub.cs.systems.eim.practicaltest01var04.PracticalTest01Var04MainActivity" >
+
+    <Button
+        android:id="@+id/navigate_to_secondary_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/navigate_to_secondary_activity" />
+
+    <CheckBox
+        android:id="@+id/top_check_box"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/navigate_to_secondary_activity_button"/>
+
+    <EditText
+        android:id="@+id/top_edit_text"
+        android:layout_width="379dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/navigate_to_secondary_activity_button"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="-98dp"
+        android:layout_toEndOf="@+id/top_check_box"
+        android:ems="7"
+        android:enabled="true"
+        android:gravity="center"
+        android:saveEnabled="false"
+        android:text="@string/top_edit_text" />
+
+    <CheckBox
+        android:id="@+id/bottom_check_box"
+        android:enabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/top_check_box"/>
+
+    <EditText
+        android:id="@+id/bottom_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_below="@id/top_edit_text"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-13dp"
+        android:layout_marginRight="-3dp"
+        android:layout_toEndOf="@+id/bottom_check_box"
+        android:ems="7"
+        android:enabled="true"
+        android:gravity="center"
+        android:saveEnabled="false"
+        android:text="@string/bottom_edit_text" />
+
+    <Button
+        android:id="@+id/display_info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bottom_edit_text"
+        android:text="@string/display_info_button" />
+    
+    <TextView
+        android:id="@+id/display_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/display_info_button"
+        android:text="@string/display_info_text"/>
+
+</RelativeLayout>

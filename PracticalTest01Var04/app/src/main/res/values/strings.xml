@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PracticalTest01Var04</string>
+    <string name="navigate_to_secondary_activity">NAVIGATE TO SECONDARY ACTIVITY</string>
+    <string name="display_info_button">DISPLAY INFORMATION</string>
+    <string name="display_info_text">" "</string>
+    <string name="bottom_edit_text">" "</string>
+    <string name="top_edit_text">" "</string>
+</resources>
